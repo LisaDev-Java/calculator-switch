@@ -1,5 +1,6 @@
 package org.lisa;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Lisa {
@@ -14,17 +15,15 @@ public class Lisa {
         System.out.print("Input a action (/ * - +) : ");
         String sign = scanner.next();
 
-        if (sign.equals("/")) {
-            System.out.println(num1 / num2);
-        }
-        if (sign.equals("*")) {
-            System.out.println(num1 * num2);
-        }
-        if (sign.equals("+")) {
-            System.out.println(num1 + num2);
-        }
-        if (sign.equals("-")) {
-            System.out.println(num1 - num2);
+        switch (sign) {
+            case "/":
+                System.out.println(num1 / num2);
+            case "*":
+                System.out.println(num1 * num2);
+            case "+":
+                System.out.println(num1 + num2);
+            case "-":
+                System.out.println(num1 - num2);
         }
     }
 }                                                      // Переделать на Switch
